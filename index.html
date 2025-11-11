@@ -23,7 +23,7 @@
            background:color-mix(in oklab,var(--paper) 75%,transparent);border-bottom:1px solid var(--smoke)}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.75rem 1.25rem}
     .brand{display:flex;gap:.75rem;align-items:center;text-decoration:none;color:inherit}
-    .logo{width:40px;height:40px;border-radius:50%;border:2px solid var(--burgundy);object-fit:cover;background:#fff}
+    .logo{width:40px;height:40px;border-radius:50%;border:2px solid var(--burgundy);object-fit:cover}
     .nav-links{display:flex;gap:.6rem;align-items:center}
     .btn{appearance:none;border:1px solid var(--smoke);background:var(--paper);color:var(--text);
          padding:.55rem .8rem;border-radius:999px;cursor:pointer;font-weight:600}
@@ -53,6 +53,7 @@
     .card img{width:100%;height:260px;object-fit:cover;border-radius:12px;border:1px solid var(--smoke);cursor:pointer}
     .list{margin:.4rem 0 0;padding-left:1.1rem}
     .list li{margin:.25rem 0}
+    /* Surprise toast + confetti */
     .toast{position:fixed;inset:auto 0 1rem 0;margin-inline:auto;width:max-content;max-width:90vw;z-index:60;
            background:var(--charcoal);color:#fff;padding:.6rem .9rem;border-radius:12px;transform:translateY(30px);opacity:0;transition:all .3s}
     .toast.show{transform:translateY(0);opacity:1}
@@ -64,12 +65,14 @@
   </style>
 </head>
 <body>
+
+  <!-- 🌟 Burgundy “S” Logo header inserted here -->
   <header>
     <nav class="nav" role="navigation" aria-label="Primary">
       <a class="brand" href="#" aria-label="Home">
-        <!-- Burgundy letter S logo -->
-        <img class="logo"
-             src="https://svgshare.com/i/17vH.svg"
+        <!-- burgundy letter S logo -->
+        <img class="logo" 
+             src="https://svgshare.com/i/17vH.svg" 
              alt="Letter S in burgundy logo" />
         <span class="title">Shaima Salim</span>
       </a>
@@ -84,11 +87,45 @@
     </nav>
   </header>
 
-  <!-- All your previous sections (banner, hero, summary, about, interests, goals) go here -->
-  <!-- Keep everything else exactly as it was in your last full version -->
-  <!-- I only replaced the header so your burgundy "S" logo now appears at the top-left -->
+  <main class="container">
+    <!-- Animated moving code banner -->
+    <div class="code-banner" aria-hidden="true">
+      <div class="marquee" id="marquee">
+        <span class="code-chip">const role = "Data Analyst";</span>
+        <span class="code-chip">let stack = ["HTML5","CSS3","JS","Excel","Python","Power BI"];</span>
+        <span class="code-chip">if (curiosity &gt; fear) { learn(); }</span>
+        <span class="code-chip">fetch("/ideas").then(build).catch(refactor);</span>
+        <span class="code-chip">/* innovation × business × UX */</span>
+        <span class="code-chip">for (let skill of stack) growth += practice(skill);</span>
+        <span class="code-chip">welcome to shaima's world ;)</span>
+        <span class="code-chip">// Urban Threads energy ✨</span>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="hero-card">
+        <span class="tag">Business Management (Innovation &amp; Technology)</span>
+        <h1 id="intro-title">Hi, I’m Shaima — building digital confidence through business &amp; code.</h1>
+        <p class="sub">
+          I’m a second-year Business student at the University of Salford with a strong interest in how technology and design can shape better business outcomes.
+          I combine strategic business thinking with practical web development and digital design skills to create ethical, sustainable, and user-friendly online experiences.
+          I’m particularly motivated by projects that promote environmental awareness and social responsibility, and I enjoy turning creative ideas into real, functional solutions that make a positive impact.
+        </p>
+      </div>
+      <div class="hero-card" role="img" aria-label="Burgundy abstract tile">
+        <img style="width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid var(--smoke)" 
+             src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?auto=format&fit=crop&w=1200&q=80" 
+             alt="Abstract burgundy and charcoal shapes" />
+      </div>
+    </section>
+
+    <!-- Keep your Professional Summary, About, Interests, and Future Goals sections here -->
+    <!-- (unchanged from your last working file) -->
+  </main>
 
   <script>
+    // dark mode toggle
     (function(){
       const saved=localStorage.getItem('theme');
       if(saved){document.documentElement.setAttribute('data-theme',saved);}
@@ -102,4 +139,3 @@
   </script>
 </body>
 </html>
-
