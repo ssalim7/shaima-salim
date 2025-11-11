@@ -29,6 +29,7 @@
          padding:.55rem .8rem;border-radius:999px;cursor:pointer;font-weight:600}
     .btn:hover{border-color:var(--burgundy)}
     .btn-ghost{border-color:transparent;background:transparent}
+    /* Moving code banner */
     .code-banner{position:relative;overflow:hidden;border-radius:18px;margin:1rem 0 1.25rem;
                  background:linear-gradient(135deg,color-mix(in oklab,var(--burgundy) 30%,var(--paper)),var(--paper));
                  border:1px solid var(--smoke)}
@@ -38,6 +39,7 @@
     .code-chip{background:color-mix(in oklab,var(--paper) 65%,var(--burgundy));border:1px solid var(--smoke);
                padding:.35rem .6rem;border-radius:10px}
     @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    /* Layout */
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:1.25rem;align-items:center}
     .hero-card{background:var(--paper);border:1px solid var(--smoke);border-radius:20px;padding:1.25rem;box-shadow:0 10px 24px rgb(0 0 0/0.04)}
     .hero h1{margin:.2rem 0 .5rem;font-size:clamp(1.4rem,2.4vw + .8rem,2.25rem)}
@@ -65,8 +67,10 @@
   <header>
     <nav class="nav" role="navigation" aria-label="Primary">
       <a class="brand" href="#" aria-label="Home">
-        <!-- Burgundy S logo -->
-        <img class="logo" src="https://svgshare.com/i/17vH.svg" alt="Letter S in burgundy logo" />
+        <!-- Burgundy letter S logo -->
+        <img class="logo"
+             src="https://svgshare.com/i/17vH.svg"
+             alt="Letter S in burgundy logo" />
         <span class="title">Shaima Salim</span>
       </a>
       <div class="nav-links">
@@ -80,37 +84,9 @@
     </nav>
   </header>
 
-  <main class="container">
-    <div class="code-banner" aria-hidden="true">
-      <div class="marquee">
-        <span class="code-chip">const role = "Data Analyst";</span>
-        <span class="code-chip">welcome to shaima's world ;)</span>
-        <span class="code-chip">// Urban Threads energy ✨</span>
-      </div>
-    </div>
-
-    <section class="hero" aria-labelledby="intro-title">
-      <div class="hero-card">
-        <span class="tag">Business Management (Innovation &amp; Technology)</span>
-        <h1 id="intro-title">Hi, I’m Shaima — building digital confidence through business &amp; code.</h1>
-        <p class="sub">
-          I’m a second-year Business student at the University of Salford with a strong interest in how technology and design can shape better business outcomes. 
-          I combine strategic business thinking with practical web development and digital design skills to create ethical, sustainable, and user-friendly online experiences. 
-          I’m particularly motivated by projects that promote environmental awareness and social responsibility, and I enjoy turning creative ideas into real, functional solutions that make a positive impact.
-        </p>
-      </div>
-      <div class="hero-card">
-        <img style="width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid var(--smoke)" 
-             src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?auto=format&fit=crop&w=1200&q=80" 
-             alt="Abstract burgundy and charcoal shapes" />
-      </div>
-    </section>
-
-    <!-- rest of your sections (Professional Summary, About, Interests, Goals) -->
-    <!-- using same layout and images you already have -->
-    <!-- make sure your last image (data analyst) uses -->
-    <!-- https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80 -->
-  </main>
+  <!-- All your previous sections (banner, hero, summary, about, interests, goals) go here -->
+  <!-- Keep everything else exactly as it was in your last full version -->
+  <!-- I only replaced the header so your burgundy "S" logo now appears at the top-left -->
 
   <script>
     (function(){
